@@ -1,0 +1,25 @@
+.header{
+    background: #000;
+    color: #862222;
+    height:100px;
+    top:0;
+    width: 100%;
+    position: fixed;
+}
+.content {
+    margin-top:100px;
+    width: 100%;
+    max-width: 1200px;
+}
+.footer {
+    height: 50px;
+    position: fixed;
+    float: left;
+}
+ul.nolist {
+  list-style-type: none;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon-96x96.png') }}" />
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='apple-icon-180x180.png') }}" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='spinner.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="header" align="center">
+        <h1>TetraEtc's Automated Slack Cleanup</h1>
+        <p>Cleaning up your files since 2016!</p>
+    </div>
+    <hr>
+    <div class="wrapper" align="center">
+
+        <div class="content" align="center" id="content">
+
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    <footer class="footer" align="right">
+        <i class="fa fa-copyright" aria-hidden="true"></i> {{ now.year }}: <a href="https://github.com/tetraetc/">TetraEtc</a>
+    </footer>
+</body>
+</html>

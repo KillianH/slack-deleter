@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{%  block title %}Token Delete | TetraEtc's Automated Slack File Deleter{% endblock %}
+{% block content %}
+<div align="center">
+    <h2>Awesome!</h2>
+    <p>We'll now delete any files that are more than {{ weeks }} {% if weeks|int > 1 %}weeks{% else %}week{% endif %} old for you!</p>
+</div>
+<div id="progress" align="center">
+    <i class="fa fa-spinner" aria-hidden="true"></i> Deleting files....
+</div>
+<script>
+    var context = document.getElementById("progress");
+    $.ajax(
+        {
+            type: "POST",
+            url: "/token/",
+            dataType: "json",
+            data: {
+                "api_token": "{{ api_token }}",
+                "weeks": "{{ weeks }}"
+            },
+            context: context,
+            success: function (data) {
+                $(this).html('<p>' + data.files + ' files have been deleted succesfully!</p>')
+            },
+            error: function () {
+                $(this).html('<p>Oh no... something went wrong!</p>')
+                }
+        }
+    );
+</script>
+{% endblock %}

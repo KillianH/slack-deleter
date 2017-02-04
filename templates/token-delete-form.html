@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}Token Delete | TetraEtc's Automated Slack File Deleter{% endblock %}
+{% block content %}
+<p>This form will delete all files from slack groups that you're part of. This is great to save the 5GB file storage limit that free teams are subjected to!</p>
+<p>Simply enter your API Key below, and select how old files must be to be deleted</p>
+<p>If you don't already have one, <a href="https://api.slack.com/docs/oauth-test-tokens" target="_blank">generate your API Key here</a></p>
+<form action="/token/" class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Please enter your API Details hereAPI Details</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="api_token">Slack API Key</label>
+  <div class="col-md-5">
+  <input id="api_token" name="api_token" type="text" placeholder="API Token" class="form-control input-md" required="">
+  <span class="help-block">The API Key for your Slack team</span>
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="weeks">How old should files be?</label>
+  <div class="col-md-4">
+    <select id="weeks" name="weeks" class="form-control">
+      <option value="1">1 week</option>
+      <option value="2">2 weeks</option>
+      <option value="3">3 weeks</option>
+      <option value="4" selected>4 weeks</option>
+      <option value="5">5 weeks</option>
+      <option value="6">6 weeks</option>
+      <option value="7">7 weeks</option>
+      <option value="8">8 weeks</option>
+      <option value="9">9 weeks</option>
+      <option value="10">10 weeks</option>
+    </select>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <button id="submit" name="submit" class="btn btn-success">Delete</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+{% endblock %}

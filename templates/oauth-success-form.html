@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+{% block content %}
+    <h2>Excellent!</h2>
+    <p>Now that we're authenticated, we can delete your files!</p>
+    <form action="/oauth-delete/">
+        <div class="form-group hidden">
+                <input id="api_token" name="api_token" type="text" value="{{ token }}">
+        </div>
+        <p>First, select how many weeks worth of files you want to delete:</p>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="weeks">How old should files be?</label>
+            <div class="col-md-4">
+                <select id="weeks" name="weeks" class="form-control">
+                    <option value="1">1 week</option>
+                    <option value="2">2 weeks</option>
+                    <option value="3">3 weeks</option>
+                    <option value="4" selected>4 weeks</option>
+                    <option value="5">5 weeks</option>
+                    <option value="6">6 weeks</option>
+                    <option value="7">7 weeks</option>
+                    <option value="8">8 weeks</option>
+                    <option value="9">9 weeks</option>
+                    <option value="10">10 weeks</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="submit"></label>
+            <div class="col-md-4">
+                <button id="submit" name="submit" class="btn btn-success">Delete</button>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}

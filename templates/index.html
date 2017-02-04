@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Home | TetraEtc's Automated Slack File Deleter{% endblock %}
+{% block content %}
+    <h2>Welcome</h2>
+    <h3>Please choose your authentication option:</h3>
+    <div class="container">
+        <ul class="nolist">
+            <li>
+                <a href="/token/">
+                    <strong>Authenticate Via Token</strong>
+                    <p>Authenticating Via Token is the quick and easy way of authenticating</p>
+                </a>
+            </li>
+            <li>
+                <a href="/oauth/">
+                    <strong>Authenticate Via Oauth</strong>
+                    <p>Authenticating Via Oauth is the more secure way of authenticating</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}

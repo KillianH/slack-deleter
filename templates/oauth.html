@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}OAuth Start | TetraEtc's Automated Slack File Deleter{% endblock %}
+{% block content %}
+    <div>
+        <h2>Oauth Method</h2>
+        <p>To begin, we first need to add the app to slack</p>
+        <a href="https://slack.com/oauth/authorize?{{ auth_url }}">
+            <img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png"
+                 srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x,
+                 https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" />
+        </a>
+        <p>This will request the following permissions:<br>
+            <pre>
+files:read
+files:write:user</pre>
+        </p>
+        <p>These permissions are the bare minimum needed to ensure that we can find all your old files, and delete them.</p>
+    </div>
+{% endblock %}
