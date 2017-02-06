@@ -35,7 +35,7 @@ def main(token, weeks=4):
     count = 1
     for file in files_to_delete:
         print("Deleting file {} of {}".format(count, len(files_to_delete)))
-        slack.files.delete(file=file['id'])
+        slack.files.delete(file_=file['id'])
         print("Deleted Successfully")
         count+=1
 
