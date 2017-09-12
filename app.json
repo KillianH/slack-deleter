@@ -13,7 +13,7 @@
       "value": ""
     },
     "DOMAIN": {
-      "description": "The Domain you're running this script at"
+      "description": "The Domain you're running this script at",
       "value": ""
     }
   }
