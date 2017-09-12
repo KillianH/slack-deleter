@@ -2,10 +2,7 @@
   "name": "Slack-deleter",
   "description": "a simple FLASK app that allows a user to quickly delete all the files they have access to in their slack team",
   "repository": "https://github.com/TetraEtc/slack-deleter",
-  "keywords": [
-    "python",
-    "flask"
-  ],
+  "keywords": ["python","flask"],
   "env": {
     "SLACK_CLIENT_ID": {
       "description": "Client ID As provided by Slack",
@@ -16,7 +13,7 @@
       "value": ""
     },
     "DOMAIN": {
-      "description": "The Domain you're running this script at"
+      "description": "The Domain you're running this script at",
       "value": ""
     }
   }
